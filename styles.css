@@ -155,8 +155,8 @@
   }
   .chat-icon{
     background-image: url('double-chat-icon.webp');
-    height:75px;
-    width: 75px;
+    height:50px;
+    width: 50px;
     background-size: cover;
     position:absolute;
     bottom:10px;
