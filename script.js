@@ -28,8 +28,8 @@ msgerForm.addEventListener("submit", event => {
       action: "sendmessage",
       data: {
           question: msgText,
-          assistant_id: "asst_SzVrgEGUGgOsGr5xuszO3oo5",
-          thread_id: "thread_Ljf0eu0BaJFojQaJEHvb9eTt"
+          assistant_id: "asst_XAItd5TbGX3hrKAthaD2oTpp",
+          thread_id: "thread_BwzzihilIMGgMQPJR7pFDD9O"
       }
   };
   if(aiResponse){
