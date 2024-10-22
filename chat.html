@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/js/all.js" />
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 core</title>
+    
+</head>
+<body>
+ 
+
+
+
+
+  
+            <script>
+              // Create a floating div for the chatbox
+              var chatboxDiv = document.createElement("div");
+              chatboxDiv.id = "chatbox-container";
+              chatboxDiv.style.position = "fixed";
+              chatboxDiv.style.bottom = "20px";
+              chatboxDiv.style.right = "20px";
+              chatboxDiv.style.width = "350px";
+              chatboxDiv.style.height = "500px";
+              chatboxDiv.style.zIndex = "9999";  // Ensure it stays on top
+              chatboxDiv.style.borderRadius = "10px";
+             
+              chatboxDiv.style.background = "transparent";  // Optional background
+              chatboxDiv.style.overflow = "hidden";  // In case content exceeds
+              chatboxDiv.style.display = "none";  // Hidden initially
+          
+              // Append the chatbox div to the body
+              document.body.appendChild(chatboxDiv);
+          
+              // Load your chatbox via iframe or directly through HTML content
+              var chatboxIframe = document.createElement("iframe");
+              chatboxIframe.src = "http://127.0.0.1:5500/transferro/";  // Replace with your hosted chatbox URL
+              chatboxIframe.style.width = "100%";
+              chatboxIframe.style.height = "100%";
+              chatboxIframe.style.border = "none";
+              chatboxIframe.style.scrollBehavior="none"
+          
+              // Append the iframe (chatbox content) to the floating div
+              chatboxDiv.appendChild(chatboxIframe);
+              chatboxDiv.style.display="block"
+          
+              // Toggle Chatbox Visibility
+              // function toggleChatbox() {
+              //     if (chatboxDiv.style.display === "none") {
+              //         chatboxDiv.style.display = "block";
+              //     } else {
+              //         chatboxDiv.style.display = "none";
+              //     }
+              // }
+          
+              // Create a button to open/close the chatbox
+              // var toggleButton = document.createElement("button");
+              // toggleButton.id = "chatbox-toggle";
+              // toggleButton.innerText = "Chat";
+              // toggleButton.style.position = "fixed";
+              // toggleButton.style.bottom = "20px";
+              // toggleButton.style.right = "20px";
+              // toggleButton.style.zIndex = "9999";
+              // toggleButton.style.padding = "10px 20px";
+              // toggleButton.style.borderRadius = "5px";
+              // toggleButton.style.backgroundColor = "#007bff";  // Button background color
+              // toggleButton.style.color = "white";  // Button text color
+              // toggleButton.style.border = "none";
+              // toggleButton.style.cursor = "pointer";
+          
+              // // Add click event to toggle the chatbox visibility
+              // toggleButton.onclick = toggleChatbox;
+          
+              // // Append the toggle button to the body
+              // document.body.appendChild(toggleButton);
+          </script>
+          
+</body>
+
+
+</html>
