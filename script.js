@@ -6,7 +6,7 @@ let aiResponse=true;
 // Icons made by Freepik from www.flaticon.com
 const BOT_IMG = "https://image.flaticon.com/icons/svg/327/327779.svg";
 const PERSON_IMG = "https://image.flaticon.com/icons/svg/145/145867.svg";
-const BOT_NAME = "Rara Restaurant";
+const BOT_NAME = "5 Core";
 const PERSON_NAME = "Customer";
 const socket = new WebSocket('wss://4bwcngjbd2.execute-api.us-east-1.amazonaws.com/Prod');
 
