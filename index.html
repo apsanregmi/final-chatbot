@@ -1,93 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
-    />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Chat Icon -->
+  <div id="chat-icon" onclick="toggleChatIcon()">
+    <img src="https://image.flaticon.com/icons/png/512/1370/1370907.png" alt="Chat Icon" width="50">
+  </div>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>5 core</title>
-  </head>
-  <body>
-    <div class="chat-icon" id="chat-icon" onclick="toggleChatIcon() "></div>
-    <section class="msger" id="chat-box" style="display: none">
-      <header class="msger-header">
-        <!-- <div class="msger-header-title">
-          <img src="https://5core.com/cdn/shop/files/LOGO_3_RED_LOGO_434503c0-3697-4c30-8728-1dfc9d9de8d5_185x@2x.png?v=1728161307"/>
-          <i class="fas fa-comment-alt"></i> 5 Core GavieAI Support
-        </div> -->
+  <!-- Chatbox -->
+  <section id="chat-box" class="msger" style="display: none;">
+    <header class="msger-header">
+      <div>Gavie AI Chat</div>
+      <button onclick="closeChat()">Close</button>
+    </header>
+    <main class="msger-chat" id="chatbox">
+      <!-- Messages will be appended here -->
+    </main>
+    <form class="msger-inputarea">
+      <input type="text" class="msger-input" placeholder="Enter your message..." autocomplete="off">
+      <button type="submit" class="msger-send-btn">Send</button>
+    </form>
+  </section>
 
-
-        <div class="msger-header-title" style="display: flex; align-items: center; background-color: #f5f5f5; padding: 10px; border-bottom: 2px solid #ff5733; border-radius: 5px;">
-          <img src="https://5core.com/cdn/shop/files/LOGO_3_RED_LOGO_434503c0-3697-4c30-8728-1dfc9d9de8d5_185x@2x.png?v=1728161307" style="width: 40px; height: auto; margin-right: 10px;"/>
-          <i class="fas fa-comment-alt" style="font-size: 24px; color: #ff5733; margin-right: 8px;"></i>
-          <span style="font-size: 18px; font-weight: bold; color: #333;">5 Core GavieAI Support</span>
-      </div>
-
-
-
-
-        <div class="msger-header-options">
-          <span
-            ><i class="fas fa-cog"></i>
-            <div id="close" onclick="closeChat()">X</div></span
-          >
-        </div>
-      </header>
-
-      <main class="msger-chat">
-        <div class="msg left-msg">
-          <div
-            class="msg-img"
-            style="
-              background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5kYUrJzKxw1719ReJe2CI8xRFR1Ar64h92g&s);
-            "
-          ></div>
-
-          <div class="msg-bubble">
-            <div class="msg-info">
-              <div class="msg-info-name">5 Core</div>
-              <div class="msg-info-time">12:45</div>
-            </div>
-
-            <div class="msg-text">
-              Hi, welcome to 5 Core. Feel free to ask 😄
-            </div>
-          </div>
-        </div>
-
-        <!-- <div class="msg right-msg">
-          <div
-            class="msg-img"
-            style="
-              background-image: url(https://image.flaticon.com/icons/svg/145/145867.svg);
-            "
-          ></div> -->
-
-          <!-- <div class="msg-bubble">
-            <div class="msg-info">
-              <div class="msg-info-name"></div>
-              <div class="msg-info-time"></div>
-            </div> -->
-
-            <div class="msg-text"></div>
-          </div>
-        </div>
-      </main>
-
-      <form class="msger-inputarea">
-        <input
-          type="text"
-          class="msger-input"
-          placeholder="Enter your message..."
-        />
-        <button type="submit" class="msger-send-btn" id="msgBtn">Send</button>
-      </form>
-    </section>
-
-    <script src="script.js"></script>
-  </body>
+  <!-- JavaScript for WebSocket connection and message handling -->
+  <script src="script.js"></script>
+</body>
 </html>
