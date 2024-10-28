@@ -26,7 +26,7 @@ body {
   bottom: 0;
   right: 0;
   width: 350px;
-  max-height: 400px; /* Set maximum height */
+  max-height: 500px; /* Set maximum height */
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
