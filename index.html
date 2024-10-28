@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chatbot</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Chat Icon -->
-  <div id="chat-icon" onclick="toggleChatIcon()">
-    <img src="https://image.flaticon.com/icons/png/512/1370/1370907.png" alt="Chat Icon" width="50">
-  </div>
-
-  <!-- Chatbox -->
-  <section id="chat-box" class="msger" style="display: none;">
-    <header class="msger-header">
-      <div>Gavie AI Chat</div>
-      <button onclick="closeChat()">Close</button>
-    </header>
-    <main class="msger-chat" id="chatbox">
-      <!-- Messages will be appended here -->
-    </main>
-    <form class="msger-inputarea">
-      <input type="text" class="msger-input" placeholder="Enter your message..." autocomplete="off">
-      <button type="submit" class="msger-send-btn">Send</button>
-    </form>
-  </section>
-
-  <!-- JavaScript for WebSocket connection and message handling -->
-  <script src="script.js"></script>
+    <div class="chat-icon" id="chat-icon" onclick="toggleChatIcon()">💬</div>
+    <div class="chat-container" id="chat-box">
+        <div class="chat-header">
+            <h2>Chatbot</h2>
+            <button class="close-btn" onclick="closeChat()">×</button>
+        </div>
+        <div id="chat-box" class="chat-box">
+            <div id="msger-chat" class="msger-chat">
+                <!-- Messages will appear here -->
+            </div>
+            <div id="typing-indicator" class="typing-indicator hidden">Bot is typing...</div>
+        </div>
+        <form class="msger-inputarea" id="msger-form">
+            <input type="text" class="msger-input" placeholder="Type your message..." autocomplete="off">
+            <button type="submit" class="msger-send-btn">Send</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
