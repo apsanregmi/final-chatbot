@@ -3,24 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot</title>
+    <title>Chatbot UI</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="chat-icon" id="chat-icon" onclick="toggleChatIcon()">💬</div>
-    <div class="chat-container" id="chat-box">
+    <div class="chat-icon" id="chat-icon" onclick="toggleChatIcon()">Chat</div>
+    <div class="chat-container" id="chat-box" style="display: none;">
         <div class="chat-header">
-            <h2>Chatbot</h2>
-            <button class="close-btn" onclick="closeChat()">×</button>
+            <span>Chat with Gavie AI</span>
+            <button onclick="closeChat()">✖</button>
         </div>
-        <div id="chat-box" class="chat-box">
-            <div id="msger-chat" class="msger-chat">
-                <!-- Messages will appear here -->
-            </div>
-            <div id="typing-indicator" class="typing-indicator hidden">Bot is typing...</div>
-        </div>
-        <form class="msger-inputarea" id="msger-form">
-            <input type="text" class="msger-input" placeholder="Type your message..." autocomplete="off">
+        <div id="msger-chat" class="chat-window"></div>
+        <div id="typing-indicator" class="typing-indicator">Gavie AI is typing...</div>
+        <form id="msger-form" class="input-area">
+            <input type="text" class="msger-input" placeholder="Type your message...">
             <button type="submit" class="msger-send-btn">Send</button>
         </form>
     </div>

@@ -1,6 +1,7 @@
 const msgerForm = document.getElementById("msger-form");
 const msgerInput = msgerForm.querySelector(".msger-input");
 const msgerChat = document.getElementById("msger-chat");
+const sendButton = msgerForm.querySelector(".msger-send-btn");
 
 const BOT_IMG = "https://image.flaticon.com/icons/svg/327/327779.svg";
 const PERSON_IMG = "https://image.flaticon.com/icons/svg/145/145867.svg";
@@ -16,8 +17,8 @@ socket.onmessage = function(event) {
     const message = JSON.parse(event.data);
     threadid = message.thread_id;
 
-    // Hide typing indicator after receiving the bot's response
-    typingIndicator.classList.add("hidden");
+    typingIndicator.style.display = "none";  // Hide typing indicator
+    sendButton.disabled = false;  // Re-enable the send button
 
     appendMessage(BOT_NAME, BOT_IMG, "left", message.message);
     aiResponse = true;
@@ -43,8 +44,8 @@ msgerForm.addEventListener("submit", event => {
         appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
         msgerInput.value = "";
 
-        // Show typing indicator when waiting for a response
-        typingIndicator.classList.remove("hidden");
+        typingIndicator.style.display = "block";  // Show typing indicator
+        sendButton.disabled = true;  // Disable send button while bot is typing
 
         aiResponse = false;
     }
@@ -65,7 +66,7 @@ function appendMessage(name, img, side, text) {
     `;
 
     msgerChat.insertAdjacentHTML("beforeend", msgHTML);
-    msgerChat.scrollTop += 500;
+    msgerChat.scrollTop = msgerChat.scrollHeight;
 }
 
 function toggleChatIcon() {
