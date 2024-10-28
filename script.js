@@ -13,6 +13,12 @@ let threadid = null;
 const typingIndicator = document.getElementById("typing-indicator");
 let aiResponse = true;
 
+
+const cors = require('cors');
+app.use(cors({
+  origin: 'https://msnepal.myshopify.com' // Replace with your Shopify store URL
+}));
+
 // WebSocket message handler
 socket.onmessage = function(event) {
     const message = JSON.parse(event.data);
@@ -38,24 +44,24 @@ msgerForm.addEventListener("submit", event => {
         }
     };
 
-    sendMessage(msgText, messageData); // Send user message
+    sendMessage(msgText, messageData); 
 });
 
-// Function to send a message
+
 function sendMessage(msgText, messageData) {
     if (aiResponse) {
         appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText); // Display user message
-        msgerInput.value = ""; // Clear input
+        msgerInput.value = ""; 
 
-        showTypingIndicator(); // Show typing indicator
-        socket.send(JSON.stringify(messageData)); // Send message through WebSocket
-        aiResponse = false; // Set to indicate the bot is typing
-    msgerChat.scrollTop = msgerChat.scrollHeight; // Scroll to the bottom of chat
+        showTypingIndicator(); 
+        socket.send(JSON.stringify(messageData)); 
+        aiResponse = false; 
+    msgerChat.scrollTop = msgerChat.scrollHeight; 
 
     }
 }
 
-// Function to append messages to chat
+
 function appendMessage(name, img, side, text) {
     const msgHTML = `
         <div class="msg ${side}-msg">
@@ -70,11 +76,11 @@ function appendMessage(name, img, side, text) {
         </div>
     `;
 
-    msgerChat.insertAdjacentHTML("beforeend", msgHTML); // Insert message at the end
-    msgerChat.scrollTop = msgerChat.scrollHeight; // Scroll to the bottom of chat
+    msgerChat.insertAdjacentHTML("beforeend", msgHTML); 
+    msgerChat.scrollTop = msgerChat.scrollHeight; 
 }
 
-// Functions to toggle chat window visibility
+
 function toggleChatIcon() {
     document.getElementById("chat-box").style.display = "flex";
     document.getElementById("chat-icon").style.display = "none";
@@ -94,8 +100,8 @@ function formatDate(date) {
 
 // Typing indicator functions
 function showTypingIndicator() {
-    typingIndicator.style.display = "block"; // Show typing indicator
-    sendButton.disabled = true; // Disable send button while bot is typing
+    typingIndicator.style.display = "block"; 
+    sendButton.disabled = true; 
 }
 
 function hideTypingIndicator() {
