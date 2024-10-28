@@ -9,8 +9,8 @@ body {
 /* Chat Icon */
 .chat-icon {
   position: fixed;
-  bottom: 0;
-  right: 0;
+  bottom: 20px;
+  right: 20px;
   background-color: #f44336; /* Red background */
   color: white;
   border-radius: 50%;
@@ -23,8 +23,8 @@ body {
 /* Chat Window */
 .msger {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 0;
+  right: 0;
   width: 350px;
   max-height: 400px; /* Set maximum height */
   background-color: white;
