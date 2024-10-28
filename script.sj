@@ -32,33 +32,18 @@
               <i class="fas fa-times" onclick="closeChat()">➖ </i>
           </div>
       </header>
-        <!-- <main class="msger-chat">
+        <main class="msger-chat">
             <div class="msg left-msg">
                 <div class="msg-img" style="background-image: url(https://5core.com/cdn/shop/files/LOGO_3_RED_LOGO_434503c0-3697-4c30-8728-1dfc9d9de8d5_185x@2x.png?v=1728161307);"></div>
                 <div class="msg-bubble">
                     <div class="msg-info">
                         <div class="msg-info-name">5 Core</div>
-                        <div class="msg-info-time">${formatDate(new Date())}</div>
+                        <!-- <div class="msg-info-time">${formatDate(new Date())}</div> -->
                     </div>
                     <div class="msg-text">Hi, welcome to 5 Core. Feel free to ask 😄</div>
                 </div>
             </div>
-        </main> -->
-
-
-        <main class="msger-chat" id="msger-chat">
-          <div class="msg left-msg">
-              <div class="msg-img" style="background-image: url(https://5core.com/cdn/shop/files/LOGO_3_RED_LOGO_434503c0-3697-4c30-8728-1dfc9d9de8d5_185x@2x.png?v=1728161307);"></div>
-              <div class="msg-bubble">
-                  <div class="msg-info">
-                      <div class="msg-info-name">5 Core</div>
-                      <!-- <div class="msg-info-time">${formatDate(new Date())}</div> -->
-                  </div>
-                  <div class="msg-text">Hi, welcome to 5 Core. Feel free to ask 😄</div>
-              </div>
-          </div>
-      </main>
-      
+        </main>
         <div class="typing-indicator" style="display: none;">
             <div class="dot"></div>
             <div class="dot"></div>
