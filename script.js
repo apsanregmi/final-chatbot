@@ -14,10 +14,10 @@ const typingIndicator = document.getElementById("typing-indicator");
 let aiResponse = true;
 
 
-const cors = require('cors');
-app.use(cors({
-  origin: 'https://msnepal.myshopify.com' // Replace with your Shopify store URL
-}));
+// const cors = require('cors');
+// app.use(cors({
+//   origin: 'https://msnepal.myshopify.com' // Replace with your Shopify store URL
+// }));
 
 // WebSocket message handler
 socket.onmessage = function(event) {

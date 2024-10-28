@@ -9,8 +9,8 @@ body {
 /* Chat Icon */
 .chat-icon {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 0;
+  right: 0;
   background-color: #f44336; /* Red background */
   color: white;
   border-radius: 50%;
